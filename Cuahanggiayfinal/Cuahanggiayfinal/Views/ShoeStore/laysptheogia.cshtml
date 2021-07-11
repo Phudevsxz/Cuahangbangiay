@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Cuahanggiayfinal.Models.PRODUCT>
+
+<div class="box-product">
+    @foreach (var item in Model)
+    {
+
+        <div>
+            <div class="image"><a href="@Url.Action("Details", "ShoeStore", new { id = item.productId })"><img src="~/images/@item.img" alt="" style="width:61px" /></a></div>
+            <div class="name"><a href="@Url.Action("Details", "ShoeStore",new { id = item.productId })">@item.productName</a></div>
+            <div class="price"> <span class="price-new">@String.Format("{0:0,0}", item.price) VNĐ</span> </div>
+            <div class="rating"><img src="~/image/stars-0.png" alt="Based on 0 reviews." /></div>
+            <div class="cart">
+                <input type="button" value="Add to Cart" onClick="addToCart('42');" class="button" />
+            </div>
+        </div>
+    }
+    </div>
