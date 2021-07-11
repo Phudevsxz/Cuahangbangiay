@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="shopgiay9999" Class="dbQLBangiayDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LAPTOP-KN2V181J\SQLEXPRESS;Initial Catalog=shopgiay9999;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="shopgiay9999ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.size" Member="sizes">
+    <Type Name="size">
+      <Column Name="sizeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sizegiay" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="size_PRODUCT" Member="PRODUCTs" ThisKey="sizeId" OtherKey="sizeId" Type="PRODUCT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCT" Member="PRODUCTs">
+    <Type Name="PRODUCT">
+      <Column Name="productId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="productName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="sizeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="catId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="brandId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="product_desc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaycapnhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="soluongton" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PRODUCT_chitietdonhang" Member="chitietdonhangs" ThisKey="productId" OtherKey="productId" Type="chitietdonhang" />
+      <Association Name="size_PRODUCT" Member="size" ThisKey="sizeId" OtherKey="sizeId" Type="size" IsForeignKey="true" />
+      <Association Name="CATEGORY_PRODUCT" Member="CATEGORY" ThisKey="catId" OtherKey="catId" Type="CATEGORY" IsForeignKey="true" />
+      <Association Name="brand_PRODUCT" Member="brand" ThisKey="brandId" OtherKey="brandId" Type="brand" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CUSTOMER" Member="CUSTOMERs">
+    <Type Name="CUSTOMER">
+      <Column Name="customerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customerName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="customeremail" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="taikhoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="matkhau" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="CUSTOMER_cart" Member="carts" ThisKey="customerId" OtherKey="customerId" Type="cart" />
+    </Type>
+  </Table>
+  <Table Name="dbo.chitietdonhang" Member="chitietdonhangs">
+    <Type Name="chitietdonhang">
+      <Column Name="cartId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="productId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Dongia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="PRODUCT_chitietdonhang" Member="PRODUCT" ThisKey="productId" OtherKey="productId" Type="PRODUCT" IsForeignKey="true" />
+      <Association Name="cart_chitietdonhang" Member="cart" ThisKey="cartId" OtherKey="cartId" Type="cart" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CATEGORY" Member="CATEGORies">
+    <Type Name="CATEGORY">
+      <Column Name="catId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="catName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="CATEGORY_PRODUCT" Member="PRODUCTs" ThisKey="catId" OtherKey="catId" Type="PRODUCT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.cart" Member="carts">
+    <Type Name="cart">
+      <Column Name="cartId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ngaydat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngaygiao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="customerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tinhtrang" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="cart_chitietdonhang" Member="chitietdonhangs" ThisKey="cartId" OtherKey="cartId" Type="chitietdonhang" />
+      <Association Name="CUSTOMER_cart" Member="CUSTOMER" ThisKey="customerId" OtherKey="customerId" Type="CUSTOMER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.brand" Member="brands">
+    <Type Name="brand">
+      <Column Name="brandId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="branName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="brand_PRODUCT" Member="PRODUCTs" ThisKey="brandId" OtherKey="brandId" Type="PRODUCT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ad" Member="ads">
+    <Type Name="ad">
+      <Column Name="adminId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="adminEmail" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="adminName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="adminTaikhoan" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="adminPass" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

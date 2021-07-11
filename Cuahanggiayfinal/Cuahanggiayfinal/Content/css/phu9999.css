@@ -1,0 +1,33 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+       margin-top: 50px;
+       width: 300px;
+       height: 550px;
+
+      }
+      
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .contact-head{
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding-top: 4%;
+    }
+    .left{
+        width: 50%;
+        margin-left: 3%;
+        margin-top: 50px;
+        float: left;
+    }
+    .left h3{
+        text-align: center;
+    }
+    .right {
+    padding: 0;
+}

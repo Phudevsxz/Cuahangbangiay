@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Cuahanggiayfinal.Models.size>
+<li>
+    <a class="cuuchild ">Giày theo Size</a> <span class="down"></span>
+    <ul>
+        @foreach(var item in Model)
+            {
+            <li><a class="nochild " href="@Url.Action("SPtheosize","ShoeStore", new { id = item.sizeId })">
+               @item.sizegiay</a></li>
+            }
+    </ul>
+</li>
