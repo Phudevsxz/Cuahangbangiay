@@ -1,0 +1,92 @@
+﻿@using Cuahanggiayfinal.Models
+@{
+    ViewBag.Title = "Dathang";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<div id="content">
+    <h1>Shopping Cart</h1>
+    <div class="cart-info">
+        <table>
+            <thead>
+                <tr>
+                    <td class="image">Image</td>
+                    <td class="name">Name</td>
+                    <td class="model">Size</td>
+                    <td class="quantity">Quantity</td>
+                    <td class="price">Price</td>
+                    <td class="total">Total</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @using (Html.BeginForm("CapnhatCart", "Cart", new { @iMasp = item.iproductId }))
+                        {
+                            <td class="image"><img src="~/images/@item.simg" width="100" height="100" /></td>
+                            <td class="name">@item.sProductName</td>
+                            <td class="model">@item.isize</td>
+                            <td class="quantity">
+                                @item.isoluong
+                            </td>
+                            <td class="price">@String.Format("{0:0,0}", item.dDongia)</td>
+                            <td class="total">@String.Format("{0:0,0}", item.dthanhtien)</td>
+                        }
+                    </tr>
+                }
+
+
+                <tr style="font-weight: bold; text-align:right;">
+                    <td colspan="4">Số lượng giày: @ViewBag.Tongsoluong </td>
+                    <td colspan="5">Tổng tiền giày: @String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ</td>
+                </tr>
+                <tr>
+                    <td colspan="9" style="font-weight: bold; color: blue; text-align:right">
+                        @Html.ActionLink("TRỞ VỀ GIỎ HÀNG", "Cart", "Cart")
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 style="text-align:center">THÔNG TIN ĐẶT HÀNG</h2>
+        @{
+            CUSTOMER kh = (CUSTOMER)Session["Taikhoan"];
+        }
+        <table align="center">
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+                <tr style="height:40px">
+                    <td> Họ tên khách hàng:</td>
+                    <td style="font-weight:bold">  @kh.customerName </td>
+                </tr>
+
+                <tr style="height:40px">
+                    <td> Địa Chỉ:</td>
+                    <td style="font-weight:bold">  @kh.address </td>
+                </tr>
+                <tr style="height:40px">
+                    <td> Điện thoại:</td>
+                    <td style="font-weight:bold">  @kh.phone </td>
+                </tr>
+                <tr style="height:40px">
+                    <td> ngày đặt:</td>
+                    <td style="font-weight:bold">  @DateTime.Now.ToShortDateString() </td>
+                </tr>
+                <tr style="height:40px">
+                    <td>Ngày giao hàng:</td>
+                    <td style="font-weight:bold">
+                        <input type="date" name="Ngaygiao" />
+                    </td>
+                </tr>
+                <tr style="height:40px">
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Đồng ý đặt hàng" />
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+

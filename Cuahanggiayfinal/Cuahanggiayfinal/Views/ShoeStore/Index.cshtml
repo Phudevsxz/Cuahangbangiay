@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Cuahanggiayfinal.Models.PRODUCT>
+﻿@using Cuahanggiayfinal.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<PRODUCT>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
@@ -42,6 +44,21 @@
     </div>
     <!--Featured Product Part End-->
 </div>
+<style>
+    .link1 li{
+        display: inline-flex;
+    }
+    .link1{
+        margin-left:600px;
+    }
+</style>
+<div class="pagination" style="text-align:center">
+    <div class="links link1"> @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))</div>
+</div>
+
+
+
+
 
 
 

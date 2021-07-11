@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Cuahanggiayfinal.Models;
+using PagedList;
+using PagedList.Mvc;
 namespace Cuahanggiayfinal.Controllers
 {
     public class ShoeStoreController : Controller
@@ -11,10 +13,13 @@ namespace Cuahanggiayfinal.Controllers
         dbQLBangiayDataContext data = new dbQLBangiayDataContext();
         
         // GET: ShoeStore
-        public ActionResult Index()
+        public ActionResult Index(int ? page)
         {
-            var giaymoi = layproductmoi(8);
-            return View(giaymoi);
+            int pageSize = 8;
+
+            int pageNum = (page ?? 1);
+            var productmoi = layproductmoi(20);
+            return View(productmoi.ToPagedList(pageNum, pageSize));
         }
         private List<PRODUCT> layproductmoi(int count)
         {
