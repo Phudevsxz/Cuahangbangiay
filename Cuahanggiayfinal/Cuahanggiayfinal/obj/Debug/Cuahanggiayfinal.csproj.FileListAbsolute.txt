@@ -132,6 +132,8 @@ C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\Antlr3.Runtime.dll
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\Microsoft.Web.Infrastructure.dll
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\Newtonsoft.Json.dll
+C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\PagedList.dll
+C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\PagedList.Mvc.dll
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\System.Web.Helpers.dll
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\System.Web.Mvc.dll
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\System.Web.Optimization.dll
@@ -140,6 +142,8 @@ C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\System.Web.WebPage
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\System.Web.WebPages.dll
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\System.Web.WebPages.Razor.dll
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\WebGrease.dll
+C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\PagedList.xml
+C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\PagedList.Mvc.xml
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\System.Web.Helpers.xml
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\System.Web.Mvc.xml
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\System.Web.Optimization.xml
@@ -150,12 +154,7 @@ C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\System.Web.WebPage
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\Newtonsoft.Json.xml
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\Antlr3.Runtime.pdb
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\obj\Debug\Cuahanggiayfinal.csproj.AssemblyReference.cache
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\obj\Debug\Cuahanggiayfinal.csproj.CoreCompileInputs.cache
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\obj\Debug\Cuahanggiayfinal.csproj.CopyComplete
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\obj\Debug\Cuahanggiayfinal.dll
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\obj\Debug\Cuahanggiayfinal.pdb
-C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\PagedList.dll
-C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\PagedList.Mvc.dll
-C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\PagedList.xml
-C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\PagedList.Mvc.xml

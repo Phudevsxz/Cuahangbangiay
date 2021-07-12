@@ -28,7 +28,7 @@
                             <td class="name">@item.sProductName</td>
                             <td class="model">@item.isize</td>
                             <td class="quantity">
-                                <input type="number" min="1" name="txtSoluong" value="@item.isoluong" style="background-color:yellow; width:15%" />
+                                <input type="number" min="1" name="txtSoluong" value="@item.isoluong" style="background-color:aqua; width:15%" />
                                 <a href="@Url.Action("XoaCart",new { @iMasp = item.iproductId })"><img title="Remove" alt="Remove" src="~/image/flags/rubbish.png"></a>
                                 <input type="submit" value="Cập Nhật" style=" border: 6px solid green; background: green; color: white; ">
                                 <a href="@Url.Action("Details","ShoeStore", new { id = item.iproductId })"><img title="Details" alt="Details" src="~/image/flags/search.png" /></a>
@@ -45,13 +45,13 @@
                         <td colspan="5">Tổng tiền giày: @String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ</td>
                     </tr>
                     <tr>
-                        <td colspan="9" style="font-weight: bold; color: blue; text-align:right">
-                            <a href="@Url.Action("XoatatcaCart")"><img src="~/image/flags/remove-from-cart.png">Xóa giỏ hàng</a>
+                        <td colspan="9" style="text-align:right">
+                            <a href="@Url.Action("XoatatcaCart")" style="font-weight: bold; color: blue;"><img src="~/image/flags/remove-from-cart.png">Xóa giỏ hàng</a>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="10" style="font-weight: bold; color: blue; text-align:right">
-                            <a href="@Url.Action("Dathang")"><img src="~/image/flags/order-now.png">Đặt Hàng</a>
+                        <td colspan="10" style="text-align:right">
+                            <a href="@Url.Action("Dathang")" style="font-weight: bold; color: blue;"><img src="~/image/flags/order-now.png">Đặt Hàng</a>
                         </td>
                     </tr>
                 </tbody>

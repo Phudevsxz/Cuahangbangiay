@@ -131,11 +131,13 @@ namespace Cuahanggiayfinal.Controllers
         [HttpPost]
         public ActionResult Dathang(FormCollection collection)
         {
+            ViewBag.Tongtien = Tongtien();
             //them hang
             cart cr = new cart();
             CUSTOMER kh = (CUSTOMER)Session["Taikhoan"];
             List<Cart> gh = laycart();
             cr.customerId = kh.customerId;
+            cr.tongtien = (decimal)ViewBag.Tongtien;
             cr.ngaydat = DateTime.Now;
             var ngaygiao = String.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
             cr.ngaygiao = DateTime.Parse(ngaygiao);

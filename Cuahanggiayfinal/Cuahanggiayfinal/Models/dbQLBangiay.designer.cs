@@ -57,7 +57,7 @@ namespace Cuahanggiayfinal.Models
     #endregion
 		
 		public dbQLBangiayDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["shopgiay9999ConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["shopgiay9999ConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1322,6 +1322,8 @@ namespace Cuahanggiayfinal.Models
 		
 		private System.Nullable<bool> _tinhtrang;
 		
+		private System.Nullable<decimal> _tongtien;
+		
 		private EntitySet<chitietdonhang> _chitietdonhangs;
 		
 		private EntityRef<CUSTOMER> _CUSTOMER;
@@ -1340,6 +1342,8 @@ namespace Cuahanggiayfinal.Models
     partial void OncustomerIdChanged();
     partial void OntinhtrangChanging(System.Nullable<bool> value);
     partial void OntinhtrangChanged();
+    partial void OntongtienChanging(System.Nullable<decimal> value);
+    partial void OntongtienChanged();
     #endregion
 		
 		public cart()
@@ -1449,6 +1453,26 @@ namespace Cuahanggiayfinal.Models
 					this._tinhtrang = value;
 					this.SendPropertyChanged("tinhtrang");
 					this.OntinhtrangChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tongtien", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> tongtien
+		{
+			get
+			{
+				return this._tongtien;
+			}
+			set
+			{
+				if ((this._tongtien != value))
+				{
+					this.OntongtienChanging(value);
+					this.SendPropertyChanging();
+					this._tongtien = value;
+					this.SendPropertyChanged("tongtien");
+					this.OntongtienChanged();
 				}
 			}
 		}
