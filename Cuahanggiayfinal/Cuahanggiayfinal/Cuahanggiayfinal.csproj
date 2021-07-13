@@ -309,9 +309,11 @@
     <Content Include="image\favicon.png" />
     <Content Include="image\flags\gb.png" />
     <Content Include="image\flags\order-now.png" />
+    <Content Include="image\flags\pencil.png" />
     <Content Include="image\flags\remove-from-cart.png" />
     <Content Include="image\flags\rubbish.png" />
     <Content Include="image\flags\search.png" />
+    <Content Include="image\flags\trash.png" />
     <Content Include="image\flickr.png" />
     <Content Include="image\googleplus.png" />
     <Content Include="image\home-icon.png" />
