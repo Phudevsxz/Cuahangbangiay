@@ -1,0 +1,46 @@
+﻿@using Cuahanggiayfinal.Models
+@model List<Cuahanggiayfinal.Models.brand>
+@{
+    ViewBag.Title = "GetBrand";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Thông tin hãng</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                            <th>
+                                Id Giày
+                            </th>
+                            <th>
+                                Hãng giày
+                            </th>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.Count(); i++)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Model[i].brandId
+                                        </td>
+                                        <td>
+                                            @Model[i].branName
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,89 @@
+﻿@using Cuahanggiayfinal.Models
+@model List<Cuahanggiayfinal.Models.CUSTOMER>
+@{
+    ViewBag.Title = "GetUser";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Thông tin người dùng</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                            <th>
+                                Id
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Address
+                            </th>
+                            <th>
+                                City
+                            </th>
+                            <th>
+                                Country
+                            </th>
+                            <th>
+                                Phone
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                                Taikhoan
+                            </th>
+                            <th>
+                                Matkhau
+                            </th>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.Count(); i++)
+                                {
+                                <tr>
+                                    <td>
+                                        @Model[i].customerId
+                                    </td>
+                                    <td>
+                                        @Model[i].customerName
+                                    </td>
+                                    <td>
+                                        @Model[i].address
+                                    </td>
+                                    <td>
+                                        @Model[i].city
+                                    </td>
+                                    <td>
+                                        @Model[i].country
+                                    </td>
+                                    <td>
+                                        @Model[i].phone
+                                    </td>
+                                    <td>
+                                        @Model[i].customeremail
+                                    </td>
+                                    <td>
+                                        @Model[i].taikhoan
+                                    </td>
+                                    <td>
+                                        @Model[i].matkhau
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+    </div>
+</div>
+

@@ -46,5 +46,25 @@ namespace Cuahanggiayfinal.Controllers
             }
             return View();
         }
+        public ActionResult GetUser()
+        {
+            return View(data.CUSTOMERs.ToList());
+        }
+        public ActionResult GetProduct()
+        {
+            return View(data.PRODUCTs.ToList());
+        }
+        public ActionResult Getcat()
+        {
+            return View(data.CATEGORies.ToList());
+        }
+        public ActionResult GetSize()
+        {
+            return View(data.sizes.ToList());
+        }
+        public ActionResult GetBrand()
+        {
+            return View(data.brands.ToList());
+        }
     }
 }

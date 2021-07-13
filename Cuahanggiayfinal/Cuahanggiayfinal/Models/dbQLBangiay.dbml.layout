@@ -8,23 +8,23 @@
         <elementListCompartment Id="49c64a50-7525-47fe-aa03-fc07a8b6c9a4" absoluteBounds="7.39, 3.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="2bb92032-9260-4b35-80c3-ec7ca6bfe291" absoluteBounds="4.875, 2.75, 2, 2.7324039713541666">
+    <classShape Id="2bb92032-9260-4b35-80c3-ec7ca6bfe291" absoluteBounds="5, 2.5, 2, 2.7324039713541666">
       <DataClassMoniker Name="/dbQLBangiayDataContext/PRODUCT" />
       <nestedChildShapes>
-        <elementListCompartment Id="51691929-c93c-4a73-9934-0ef90e299c5d" absoluteBounds="4.89, 3.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="51691929-c93c-4a73-9934-0ef90e299c5d" absoluteBounds="5.015, 2.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(7.375 : 3.97199625651042); (7.20833333333333 : 3.97199625651042 : JumpStart); (7.04166666666667 : 3.97199625651042 : JumpEnd); (6.875 : 3.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.375 : 3.97199625651042); (7 : 3.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/dbQLBangiayDataContext/size/size_PRODUCT" />
       <nodes>
         <classShapeMoniker Id="f413daab-f6a2-4e25-9a7f-7f9691ce0449" />
         <classShapeMoniker Id="2bb92032-9260-4b35-80c3-ec7ca6bfe291" />
       </nodes>
     </associationConnector>
-    <classShape Id="102df901-6c9f-4295-8378-fdba16de90b9" absoluteBounds="1.875, 3, 2, 2.5401025390625">
+    <classShape Id="102df901-6c9f-4295-8378-fdba16de90b9" absoluteBounds="2.625, 2.75, 2, 2.5401025390625">
       <DataClassMoniker Name="/dbQLBangiayDataContext/CUSTOMER" />
       <nestedChildShapes>
-        <elementListCompartment Id="edd68eeb-6ef0-4807-ae22-bbcf4e9fc98d" absoluteBounds="1.8899999999999997, 3.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="edd68eeb-6ef0-4807-ae22-bbcf4e9fc98d" absoluteBounds="2.6399999999999997, 3.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="9e569030-8896-4035-959a-759fc10788ab" absoluteBounds="5, 0.5, 2, 1.5785953776041666">
@@ -33,7 +33,7 @@
         <elementListCompartment Id="ac91d997-61a3-46b4-bc28-b17498ab7b9d" absoluteBounds="5.015, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.21875 : 2.75); (6.21875 : 2.07859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.09375 : 2.5); (6.09375 : 2.07859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/dbQLBangiayDataContext/PRODUCT/PRODUCT_chitietdonhang" />
       <nodes>
         <classShapeMoniker Id="2bb92032-9260-4b35-80c3-ec7ca6bfe291" />
@@ -46,7 +46,7 @@
         <elementListCompartment Id="9c7d8f85-ab2c-4396-873d-f6cc92a6bc75" absoluteBounds="7.39, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(8.375 : 1.69399251302083); (8.375 : 3.125); (7.125 : 3.125); (7.125 : 4.75845211393229); (6.875 : 4.75845211393229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.375 : 1.09699625651042); (7.0625 : 1.09699625651042); (7.0625 : 2.14109537760417); (5.5781235 : 2.14109537760417); (5.5781235 : 2.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/dbQLBangiayDataContext/CATEGORY/CATEGORY_PRODUCT" />
       <nodes>
         <classShapeMoniker Id="5e171d19-8c7e-4756-9d78-285df4ffd890" />
@@ -59,14 +59,14 @@
         <elementListCompartment Id="fdf22283-3d93-47ff-9735-4671a36fccc4" absoluteBounds="3.1399999999999997, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(4.125 : 0.5); (4.125 : 0.125); (6 : 0.125); (6 : 0.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.125 : 0.5); (4.125 : 0.125); (6 : 0.125); (6 : 0.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbQLBangiayDataContext/cart/cart_chitietdonhang" />
       <nodes>
         <classShapeMoniker Id="792d02ad-c417-4af1-9699-252061ada103" />
         <classShapeMoniker Id="9e569030-8896-4035-959a-759fc10788ab" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3.5 : 3); (3.5 : 2.4631982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.875 : 2.75); (3.875 : 2.4631982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/dbQLBangiayDataContext/CUSTOMER/CUSTOMER_cart" />
       <nodes>
         <classShapeMoniker Id="102df901-6c9f-4295-8378-fdba16de90b9" />
@@ -79,17 +79,17 @@
         <elementListCompartment Id="8da254cd-284d-4c5b-bcc1-e293653aaaeb" absoluteBounds="0.51499999999999968, 1.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(1.5 : 2.69399251302083); (1.5 : 2.94399251302083); (2.75 : 2.94399251302083); (2.75 : 2.75); (3.41666666666667 : 2.75 : JumpStart); (3.58333333333333 : 2.75 : JumpEnd); (4.5 : 2.75); (4.5 : 4.11620198567708); (4.875 : 4.11620198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.5 : 2.09699625651042); (3.109375 : 2.09699625651042); (3.109375 : 2.4788232421875); (5.28906225 : 2.4788232421875); (5.28906225 : 2.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/dbQLBangiayDataContext/brand/brand_PRODUCT" />
       <nodes>
         <classShapeMoniker Id="c5eef4de-cafb-4b96-99b7-40c50e5b7179" />
         <classShapeMoniker Id="2bb92032-9260-4b35-80c3-ec7ca6bfe291" />
       </nodes>
     </associationConnector>
-    <classShape Id="eb30cfbc-247b-4742-be41-35df9a57d28d" absoluteBounds="0.875, 0.5, 2, 1.7708968098958331">
+    <classShape Id="eb30cfbc-247b-4742-be41-35df9a57d28d" absoluteBounds="0.5, 3.25, 2, 1.7708968098958331">
       <DataClassMoniker Name="/dbQLBangiayDataContext/ad" />
       <nestedChildShapes>
-        <elementListCompartment Id="08c8dfaa-46f9-4753-beb7-9ce46b62a224" absoluteBounds="0.89000000000000012, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="08c8dfaa-46f9-4753-beb7-9ce46b62a224" absoluteBounds="0.51500000000000012, 3.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
