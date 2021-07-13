@@ -1,0 +1,69 @@
+﻿@using Cuahanggiayfinal.Models
+@model List<Cuahanggiayfinal.Models.cart>
+@{
+    ViewBag.Title = "GetCart";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Thông tin Đơn đặt</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                            <th>
+                                Id
+                            </th>
+                            <th>
+                               Tên Khách
+                            </th>
+                            <th>
+                                Ngày đặt
+                            </th>
+                            <th>
+                                Ngày Giao
+                            </th>
+                            <th>
+                                Tình trạng
+                            </th>
+                            <th>
+                                Tổng tiền
+                            </th>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.Count(); i++)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Model[i].cartId
+                                        </td>
+                                        <td>
+                                            @Model[i].CUSTOMER.customerName
+                                        </td>
+                                        <td>
+                                            @Model[i].ngaydat
+                                        </td>
+                                        <td>
+                                            @Model[i].ngaygiao
+                                        </td>
+                                        <td>
+                                            @Model[i].tinhtrang
+                                        </td>
+                                        <td>
+                                            @Model[i].tongtien
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -66,5 +66,9 @@ namespace Cuahanggiayfinal.Controllers
         {
             return View(data.brands.ToList());
         }
+        public ActionResult GetCart()
+        {
+            return View(data.carts.ToList());
+        }
     }
 }
