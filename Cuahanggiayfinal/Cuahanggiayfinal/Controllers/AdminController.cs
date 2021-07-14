@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Cuahanggiayfinal.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace Cuahanggiayfinal.Controllers
 {
@@ -50,9 +52,11 @@ namespace Cuahanggiayfinal.Controllers
         {
             return View(data.CUSTOMERs.ToList());
         }
-        public ActionResult GetProduct()
+        public ActionResult GetProduct(int ? page)
         {
-            return View(data.PRODUCTs.ToList());
+            int pageNumber = (page ?? 1);
+            int pageSize = 7;
+            return View(data.PRODUCTs.ToList().OrderBy(a => a.productId).ToPagedList(pageNumber, pageSize));
         }
         public ActionResult Getcat()
         {

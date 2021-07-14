@@ -1,5 +1,6 @@
 ﻿@using Cuahanggiayfinal.Models
-@model List<Cuahanggiayfinal.Models.PRODUCT>
+@using PagedList.Mvc;
+@model PagedList.PagedList<Cuahanggiayfinal.Models.PRODUCT>
 @{
     ViewBag.Title = "GetProduct";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
@@ -81,7 +82,10 @@
                 </div>
             </div>
         </div>
-
     </div>
+</div>
+<div style="margin-left: 550px" >Bạn Đang ở Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount</div>
+<div style="text-align: center; margin-left: 600px">
+    @Html.PagedListPager(Model, page => Url.Action("GetProduct", new { page = page }) )
 </div>
 
