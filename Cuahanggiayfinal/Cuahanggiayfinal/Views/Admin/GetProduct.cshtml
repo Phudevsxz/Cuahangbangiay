@@ -32,7 +32,7 @@
                                 Ảnh
                             </th>
                             <th>
-                                Gía
+                                Giá
                             </th>
                             <th>
                                 Số lượng Tồn
@@ -55,8 +55,8 @@
                                         <td>
                                             @Model[i].size.sizegiay
                                         </td>
-                                        <td>
-                                            @Model[i].ngaycapnhat
+                                        <td> 
+                                            @String.Format("{0:d/M/yyyy}", @Model[i].ngaycapnhat)
                                         </td>
                                         <td>
                                             <img src="@Url.Content("~/images/"+ Model[i].img)" style="width:40%" />
