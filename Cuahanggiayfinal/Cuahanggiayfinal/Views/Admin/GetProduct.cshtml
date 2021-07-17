@@ -10,7 +10,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title"> Thông tin Giày</h4>
+                    <h4 class="card-title">@Html.ActionLink("Thêm Sản phẩm mới", "ThemProduct")</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -38,6 +38,9 @@
                                 Số lượng Tồn
                             </th>
                             <th>
+                                Chi tiết
+                            </th>
+                            <th>
                             </th>
                             <th>
                             </th>
@@ -55,11 +58,11 @@
                                         <td>
                                             @Model[i].size.sizegiay
                                         </td>
-                                        <td> 
+                                        <td>
                                             @String.Format("{0:d/M/yyyy}", @Model[i].ngaycapnhat)
                                         </td>
                                         <td>
-                                            <img src="@Url.Content("~/images/"+ Model[i].img)" style="width:40%" />
+                                            <img src="@Url.Content("~/images/" + Model[i].img)" style="width:40%" />
                                         </td>
                                         <td>
                                             @Model[i].price
@@ -68,11 +71,13 @@
                                             @Model[i].soluongton
                                         </td>
                                         <td>
-                                            
-                                            <a><img src="~/image/flags/pencil.png" style="width:20px" /></a>
+                                            @Model[i].product_desc
                                         </td>
                                         <td>
-                                            <a><img src="~/image/flags/trash.png" style="width:20px" /></a>
+                                            <a href="@Url.Action("ChitietProduct", new { id = @Model[i].productId })"><img src="~/image/flags/pencil.png" style="width:20px" /></a>
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("XoaProduct", new {id = Model[i].productId})"><img src="~/image/flags/trash.png" style="width:20px" /></a>
                                         </td>
                                     </tr>
                                 }

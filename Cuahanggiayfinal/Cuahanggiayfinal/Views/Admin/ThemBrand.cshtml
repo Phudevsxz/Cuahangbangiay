@@ -1,0 +1,50 @@
+﻿@model Cuahanggiayfinal.Models.brand
+
+@{
+    ViewBag.Title = "ThemBrand";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Quản lí Brand</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        @using (Html.BeginForm("ThemBrand", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-horizontal">
+                                <h4></h4>
+                                <hr />
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    <h4>Tên Brand cần thêm:</h4>
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.branName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.branName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Thêm Brand" class="btn btn-default" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        <div>
+                            @Html.ActionLink("Trở về trang Brand", "GetBrand")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -159,3 +159,7 @@ C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\obj\Debug\Cuahanggiayf
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\obj\Debug\Cuahanggiayfinal.dll
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\obj\Debug\Cuahanggiayfinal.pdb
 C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\obj\Debug\Cuahanggiayfinal.csproj.AssemblyReference.cache
+C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\EntityFramework.dll
+C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\EntityFramework.SqlServer.dll
+C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\EntityFramework.xml
+C:\Study\Cuahangbangiay\Cuahanggiayfinal\Cuahanggiayfinal\bin\EntityFramework.SqlServer.xml

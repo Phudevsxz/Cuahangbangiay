@@ -9,7 +9,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Thông tin Size</h4>
+                    <h4 class="card-title">@Html.ActionLink("Thêm Size", "ThemSize")</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -25,14 +25,20 @@
                             <tbody>
                                 @for (int i = 0; i < Model.Count(); i++)
                                 {
-                                    <tr>
-                                        <td>
-                                            @Model[i].sizeId
-                                        </td>
-                                        <td>
-                                            @Model[i].sizegiay
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td>
+                                        @Model[i].sizeId
+                                    </td>
+                                    <td>
+                                        @Model[i].sizegiay
+                                    </td>
+                                    <td>
+                                        <a><img src="~/image/flags/pencil.png" style="width:20px" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("XoaSize","Admin",new {id = @Model[i].sizeId })"><img src="~/image/flags/trash.png" style="width:20px" /></a>
+                                    </td>
+                                </tr>
                                 }
                             </tbody>
                         </table>

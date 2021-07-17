@@ -1,0 +1,44 @@
+﻿@model Cuahanggiayfinal.Models.brand
+
+@{
+    ViewBag.Title = "XoaBrand";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Bạn có muốn xóa Brand này không?</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                            <h4>brand</h4>
+                            <hr />
+                            <dl class="dl-horizontal">
+
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.branName)
+                                </dd>
+
+                            </dl>
+
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-actions no-color">
+                                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                                    @Html.ActionLink("Trở về", "GetBrand")
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+

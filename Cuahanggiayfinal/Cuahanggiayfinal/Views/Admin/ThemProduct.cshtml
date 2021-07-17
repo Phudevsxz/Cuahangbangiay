@@ -1,0 +1,110 @@
+﻿@model Cuahanggiayfinal.Models.PRODUCT
+
+@{
+    ViewBag.Title = "ThemProduct";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        @using (Html.BeginForm("ThemProduct", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            <h4>PRODUCT</h4>
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                Tên Sản Phẩm:
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.productName, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.productName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                Size Giày:
+                                <div class="col-md-10">
+                                    @Html.DropDownList("sizeId")
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                Category:
+                                <div class="col-md-10">
+                                    @Html.DropDownList("catId")
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                Brand Giày:
+                                <div class="col-md-10">
+                                    @Html.DropDownList("brandId")
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                Mô tả:
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.product_desc, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.product_desc, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                Ngày cập nhật:
+                                <div class="col-md-10">
+                                    <input type="date" name="ngaycapnhat" />
+                                    @Html.ValidationMessageFor(model => model.ngaycapnhat)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                ẢNH:
+                                <div class="update ml-auto mr-auto">
+                                    <button type="submit" class="btn btn-primary btn-round">Thêm ảnh</button>
+                                    <input type="file" name="fileUpload" />
+                                    @ViewBag.Thongbao
+                                </div>   
+                            </div>
+
+                            <div class="form-group">
+                                Giá tiền:
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.price, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.price, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                               Số lượng tồn:
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.soluongton, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.soluongton, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Thêm mới" class="btn btn-default" />
+                                </div>
+                            </div>
+                        </div>
+                        }
+
+                        <div>
+                            @Html.ActionLink("Trở về trang Product", "GetProduct")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>

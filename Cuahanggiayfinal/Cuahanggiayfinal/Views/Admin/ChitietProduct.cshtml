@@ -1,0 +1,104 @@
+﻿@model Cuahanggiayfinal.Models.PRODUCT
+
+@{
+    ViewBag.Title = "ChitietProduct";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Chi tiết sản phẩm</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                Tên Giày:
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.productName)
+                            </dd>
+
+                            <dt>
+                                Size Giày:
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.size.sizegiay)
+                            </dd>
+
+                            <dt>
+                                Category:
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CATEGORY.catName)
+                            </dd>
+
+                            <dt>
+                                Brand giày:
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.brand.branName)
+                            </dd>
+
+                            <dt>
+                                Mô Tả:
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.product_desc)
+                            </dd>
+
+                            <dt>
+                                Ngày Cập Nhật:
+                            </dt>
+
+                            <dd>
+                                @String.Format("{0:d/M/yyyy}", Model.ngaycapnhat)
+                            </dd>
+
+                            <dt>
+                                Hình ảnh:
+                            </dt>
+
+                            <dd>
+                                <img src="@Url.Content("~/images/"+ Model.img)" style="width:200px" />
+                            </dd>
+
+                            <dt>
+                                Giá tiền:
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.price) VNĐ
+                            </dd>
+
+                            <dt>
+                                Số lượng tồn:
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.soluongton)
+                            </dd>
+
+                        </dl>
+
+                        <div>
+                            @Html.ActionLink("Trở về trang Product", "GetProduct")
+                            <a href="@Url.Action("SuaProduct", new { id = Model.productId })"><img src="~/image/flags/pencil.png" style="width:20px" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

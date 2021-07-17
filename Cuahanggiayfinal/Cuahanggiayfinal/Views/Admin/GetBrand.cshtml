@@ -9,30 +9,36 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Thông tin hãng</h4>
+                    <h4 class="card-title">@Html.ActionLink("Thêm Brand", "ThemBrand")</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table">
                             <thead class=" text-primary">
                             <th>
-                                Id Giày
+                                Id Brand
                             </th>
                             <th>
-                                Hãng giày
+                                Brand Giày
                             </th>
                             </thead>
                             <tbody>
                                 @for (int i = 0; i < Model.Count(); i++)
                                 {
-                                    <tr>
-                                        <td>
-                                            @Model[i].brandId
-                                        </td>
-                                        <td>
-                                            @Model[i].branName
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td>
+                                        @Model[i].brandId
+                                    </td>
+                                    <td>
+                                        @Model[i].branName
+                                    </td>
+                                    <td>
+                                        <a><img src="~/image/flags/pencil.png" style="width:20px" /></a>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("XoaBrand","Admin",new {id = @Model[i].brandId })"><img src="~/image/flags/trash.png" style="width:20px" /></a>
+                                    </td>
+                                </tr>
                                 }
                             </tbody>
                         </table>

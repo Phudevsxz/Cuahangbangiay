@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
@@ -660,6 +666,16 @@
     <Content Include="Views\Admin\GetSize.cshtml" />
     <Content Include="Views\Admin\GetBrand.cshtml" />
     <Content Include="Views\Admin\GetCart.cshtml" />
+    <Content Include="Views\Admin\ThemBrand.cshtml" />
+    <Content Include="Views\Admin\XoaBrand.cshtml" />
+    <Content Include="Views\Admin\ThemCategory.cshtml" />
+    <Content Include="Views\Admin\XoaCategory.cshtml" />
+    <Content Include="Views\Admin\ThemSize.cshtml" />
+    <Content Include="Views\Admin\XoaSize.cshtml" />
+    <Content Include="Views\Admin\ThemProduct.cshtml" />
+    <Content Include="Views\Admin\ChitietProduct.cshtml" />
+    <Content Include="Views\Admin\XoaProduct.cshtml" />
+    <Content Include="Views\Admin\SuaProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
