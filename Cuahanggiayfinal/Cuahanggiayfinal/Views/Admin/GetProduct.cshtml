@@ -26,6 +26,9 @@
                                 Size
                             </th>
                             <th>
+                                Category
+                            </th>
+                            <th>
                                 Ngày Cập Nhật
                             </th>
                             <th>
@@ -57,6 +60,9 @@
                                         </td>
                                         <td>
                                             @Model[i].size.sizegiay
+                                        </td>
+                                        <td>
+                                            @Model[i].CATEGORY.catName
                                         </td>
                                         <td>
                                             @String.Format("{0:d/M/yyyy}", @Model[i].ngaycapnhat)

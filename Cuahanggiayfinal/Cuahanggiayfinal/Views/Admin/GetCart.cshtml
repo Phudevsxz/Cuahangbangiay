@@ -19,7 +19,7 @@
                                 Id
                             </th>
                             <th>
-                               Tên Khách
+                                Tên Khách
                             </th>
                             <th>
                                 Ngày đặt
@@ -32,6 +32,8 @@
                             </th>
                             <th>
                                 Tổng tiền
+                            </th>
+                            <th>
                             </th>
                             </thead>
                             <tbody>
@@ -55,6 +57,9 @@
                                         </td>
                                         <td>
                                             @Model[i].tongtien
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("SuaCart","Admin",new {id = @Model[i].cartId })"><img src="~/image/flags/pencil.png" style="width:20px" /></a>
                                         </td>
                                     </tr>
                                 }

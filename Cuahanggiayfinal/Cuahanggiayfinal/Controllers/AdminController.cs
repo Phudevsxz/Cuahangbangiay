@@ -250,10 +250,9 @@ namespace Cuahanggiayfinal.Controllers
         [ValidateInput(false)]
         public ActionResult ThemProduct(PRODUCT giay, HttpPostedFileBase fileUpload)
         {
-            ViewBag.SizeId = new SelectList(data.sizes.ToList().OrderByDescending(n => n.sizegiay), "sizeId", "sizegiay");
-            ViewBag.catId = new SelectList(data.CATEGORies.ToList().OrderByDescending(n => n.catId), "catId", "catName");
-            ViewBag.brandId = new SelectList(data.brands.ToList().OrderByDescending(n => n.brandId), "brandId", "branName");
-
+            ViewBag.SizeId = new SelectList(data.sizes.ToList().OrderByDescending(n => n.sizegiay), "sizeId", "sizegiay", giay.productId);
+            ViewBag.catId = new SelectList(data.CATEGORies.ToList().OrderByDescending(n => n.catId), "catId", "catName", giay.catId);
+            ViewBag.brandId = new SelectList(data.brands.ToList().OrderByDescending(n => n.brandId), "brandId", "branName",giay.brandId);
             if (fileUpload == null)
             {
                 ViewBag.Thongbao = "Vui lòng chọn ảnh của giày";
@@ -322,9 +321,6 @@ namespace Cuahanggiayfinal.Controllers
         [HttpGet]
         public ActionResult SuaProduct(int id)
         {
-            ViewBag.SizeId = new SelectList(data.sizes.ToList().OrderByDescending(n => n.sizegiay), "sizeId", "sizegiay");
-            ViewBag.catId = new SelectList(data.CATEGORies.ToList().OrderByDescending(n => n.catId), "catId", "catName");
-            ViewBag.brandId = new SelectList(data.brands.ToList().OrderByDescending(n => n.brandId), "brandId", "branName");
             PRODUCT giay = data.PRODUCTs.SingleOrDefault(n => n.productId == id);
             ViewBag.ProductId = giay.productId;
             if (giay == null)
@@ -332,43 +328,80 @@ namespace Cuahanggiayfinal.Controllers
                 Response.StatusCode = 404;
                 return null;
             }
-            return View("GetProduct");
+            ViewBag.SizeId = new SelectList(data.sizes.ToList().OrderBy(n => n.sizegiay), "sizeId", "sizegiay");
+            ViewBag.catId = new SelectList(data.CATEGORies.ToList().OrderBy(n => n.catName), "catId", "catName");
+            ViewBag.brandId = new SelectList(data.brands.ToList().OrderBy(n => n.branName), "brandId", "branName");
+            return View(giay);
         }
         [HttpPost]
         [ValidateInput(false)]
         public ActionResult SuaProduct(PRODUCT giay, HttpPostedFileBase fileUpload)
         {
-            ViewBag.SizeId = new SelectList(data.sizes.ToList().OrderByDescending(n => n.sizegiay), "sizeId", "sizegiay");
-            ViewBag.catId = new SelectList(data.CATEGORies.ToList().OrderByDescending(n => n.catId), "catId", "catName");
-            ViewBag.brandId = new SelectList(data.brands.ToList().OrderByDescending(n => n.brandId), "brandId", "branName");
+            ViewBag.sizeId = new SelectList(data.sizes.ToList().OrderBy(n => n.sizeId), "sizeId", "sizegiay");
+            ViewBag.catId = new SelectList(data.CATEGORies.ToList().OrderBy(n => n.catId), "catId", "catName");
+            ViewBag.brandId = new SelectList(data.brands.ToList().OrderBy(n => n.brandId), "brandId", "branName");
+            //if (fileUpload == null)
+            //{
+            //    ViewBag.Thongbao = "Vui lòng chọn ảnh giày";
+            //    return View();
+            //}
+            //else
+            //{
+            //    if (ModelState.IsValid)
+            //    {
+            //        var FileName = Path.GetFileName(fileUpload.FileName);
+
+            //        var path = Path.Combine(Server.MapPath("~/images"), FileName);
+            //        if (System.IO.File.Exists(path))
+            //        {
+            //            ViewBag.Thongbao = "Hình ảnh đã tồn tại";
+            //        }
+            //        else
+            //        {
+            //            fileUpload.SaveAs(path);
+            //        }
+
+            //        giay.img = FileName;
+
+            //        UpdateModel(giay);
+            //        data.SubmitChanges();
+            //    }
+            //    return RedirectToAction("GetProduct");
+            PRODUCT g = data.PRODUCTs.FirstOrDefault(n => n.productId == giay.productId);
+            g.productName = giay.productName;
+            g.product_desc = giay.product_desc;
+            g.ngaycapnhat = giay.ngaycapnhat;
+            g.price = giay.price;
+            g.soluongton = giay.soluongton;
+            g.sizeId = giay.sizeId;
+            g.brandId = giay.brandId;
+            g.catId = giay.catId;
             if (fileUpload == null)
             {
-                ViewBag.Thongbao = "Vui lòng chọn ảnh giày";
+                ViewBag.Thongbao = "Chua co hinh";
                 return View();
             }
-            else
+            else if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                if (fileUpload != null && fileUpload.ContentLength > 0)
                 {
-                    var FileName = Path.GetFileName(fileUpload.FileName);
-
-                    var path = Path.Combine(Server.MapPath("~/images"), FileName);
+                    var fileName = Path.GetFileName(fileUpload.FileName);
+                    var path = Path.Combine(Server.MapPath("~/images"), fileName);
                     if (System.IO.File.Exists(path))
                     {
-                        ViewBag.Thongbao = "Hình ảnh đã tồn tại";
+                        ViewBag.Thongbao = "da ton tai";
                     }
                     else
                     {
                         fileUpload.SaveAs(path);
                     }
-
-                    giay.img = FileName;
-
-                    UpdateModel(giay);
-                    data.SubmitChanges();
+                    giay.img = fileName;
                 }
-                return RedirectToAction("GetProduct");
+                g.img = giay.img;
+                data.SubmitChanges();
             }
+            return RedirectToAction("GetProduct");
+        }
         }
     }
-}
+//}
