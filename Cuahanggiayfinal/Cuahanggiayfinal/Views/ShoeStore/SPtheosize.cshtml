@@ -31,7 +31,9 @@
                         <div class="name"><span>@product.productName</span></div>
                         <div class="price"> @String.Format("{0:0,0}", product.price) VNĐ </div>
                         <div class="cart">
-                            <input type="button" value="Add to Cart" onClick="addToCart('40');" class="button" />
+                            <a href="@Url.Action("themCart","Cart", new { @iproductId = @product.productId, @strURL=Request.Url.ToString() })">
+                                <input type="button" value="Add to Cart" onClick="addToCart('40');" class="button" />
+                            </a>
                         </div>
                     </div>
                 }

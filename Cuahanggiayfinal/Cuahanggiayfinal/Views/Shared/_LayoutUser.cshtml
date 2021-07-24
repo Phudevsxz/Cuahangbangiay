@@ -60,7 +60,7 @@
             <span>Menu</span>
             <ul>
                 <li class="home"><a title="Home" href="@Url.Action("Index","ShoeStore")"><span>Home</span></a></li>
-                <li><a href="@Url.Action("adidasAbout","ShoeStore")">ABOUT CONVERSE</a> </li>
+                <li><a href="@Url.Action("adidasAbout","ShoeStore")">ABOUT ADIDAS</a> </li>
                 <li><a href="@Url.Action("converseAbout","ShoeStore")">ABOUT CONVERSE</a> </li>
                 <li><a href="@Url.Action("nikeAbout","ShoeStore")">ABOUT NIKE</a> </li>
                 <li><a href="@Url.Action("Contact","ShoeStore")">CONTACT</a> </li>
@@ -72,7 +72,7 @@
             <div id="column-left">
                 <!--Categories Part Start-->
                 <div class="box">
-                    <div class="box-heading">ShoesStore9999</div>
+                    <div class="box-heading">SHOES STORE</div>
                     <div class="box-content box-category">
                         <ul id="custom_accordion">
                             @Html.Action("hang", "ShoeStore")
@@ -86,7 +86,7 @@
                 <div class="box">
                     <div class="box-heading">HOT PRODUCT</div>
                     <div class="box-content">
-                        @Html.Action("giayhot","ShoeStore")
+                        @Html.Action("giayhot", "ShoeStore")
                     </div>
                 </div>
                 <!--Latest Product End-->
@@ -101,7 +101,7 @@
             </div>
             <!--Left End-->
             <!--Middle Part Start-->
-                @RenderBody()
+            @RenderBody()
             <!--Middle Part End-->
             <!--Footer Part Start-->
             <div id="footer">
@@ -146,5 +146,18 @@
                 </div>
             </div>
             <!--Footer Part End-->
+            <!--Start of Tawk.to Script-->
+            <script type="text/javascript">
+                var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+                (function () {
+                    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                    s1.async = true;
+                    s1.src = 'https://embed.tawk.to/60fc16d4649e0a0a5ccdc06d/1fbcbic26';
+                    s1.charset = 'UTF-8';
+                    s1.setAttribute('crossorigin', '*');
+                    s0.parentNode.insertBefore(s1, s0);
+                })();
+            </script>
+            <!--End of Tawk.to Script-->
 </body>
 </html>
